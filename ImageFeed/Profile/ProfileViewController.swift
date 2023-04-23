@@ -33,7 +33,7 @@ final class ProfileViewController: UIViewController {
         
         avatarImageView.heightAnchor.constraint(equalToConstant: 70).isActive = true
         avatarImageView.widthAnchor.constraint(equalToConstant: 70).isActive = true
-        avatarImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 76).isActive = true
+        avatarImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40).isActive = true
         avatarImageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16).isActive = true
         
         self.avatarImageView = avatarImageView
@@ -56,7 +56,7 @@ final class ProfileViewController: UIViewController {
         let loginNameLabel = UILabel()
         loginNameLabel.translatesAutoresizingMaskIntoConstraints = false
         loginNameLabel.textColor = UIColor(red: 0.682, green: 0.686, blue: 0.706, alpha: 1)
-        loginNameLabel.font = UIFont(name: "SFPro-Regular", size: 13)
+        loginNameLabel.font = UIFont.systemFont(ofSize: 13, weight: .regular)
         loginNameLabel.text = "@ekaterina_nov"
         view.addSubview(loginNameLabel)
         
@@ -69,7 +69,7 @@ final class ProfileViewController: UIViewController {
         let descriptionLabel = UILabel()
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        descriptionLabel.font = UIFont(name: "SFPro-Regular", size: 13)
+        descriptionLabel.font = UIFont.systemFont(ofSize: 13, weight: .regular)
         descriptionLabel.text = "Hello, world!"
         view.addSubview(descriptionLabel)
         
@@ -79,7 +79,7 @@ final class ProfileViewController: UIViewController {
     }
     
     private func logoutButtonCall() {
-        let logoutButton = UIButton.systemButton(with: UIImage(systemName: "ipad.and.arrow.forward")!, target: self, action: #selector(Self.didTapLogoutButton))
+        let logoutButton = UIButton.systemButton(with: UIImage(named: "logout_button")!, target: self, action: #selector(Self.didTapLogoutButton))
         logoutButton.translatesAutoresizingMaskIntoConstraints = false
         logoutButton.tintColor = UIColor(red: 0.961, green: 0.42, blue: 0.424, alpha: 1)
         view.addSubview(logoutButton)
@@ -87,7 +87,7 @@ final class ProfileViewController: UIViewController {
         logoutButton.heightAnchor.constraint(equalToConstant: 22).isActive = true
         logoutButton.widthAnchor.constraint(equalToConstant: 20).isActive = true
         logoutButton.centerYAnchor.constraint(equalTo: avatarImageView.centerYAnchor).isActive = true
-        logoutButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -26).isActive = true
+        logoutButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -24).isActive = true
         self.logoutButton = logoutButton
     }
     
